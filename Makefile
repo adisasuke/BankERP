@@ -14,6 +14,9 @@ OBJ_FILES := $(patsubst $(SRC_DIR)/%.cpp, $(BIN_DIR)/%.o, $(SRC_FILES))
 # The main target (executable)
 TARGET := $(BIN_DIR)/main
 
+# Create the bin directory if it doesn't exist
+$(shell mkdir -p $(BIN_DIR))
+
 all: $(TARGET)
 
 # Rule to compile the source files into object files
